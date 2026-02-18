@@ -19,8 +19,8 @@
   },
   "email": {
     "serviceID": "service_jbzcbpk",
-    "storeTemplateID": "REPLACE_WITH_STORE_TEMPLATE_ID",
-    "customerTemplateID": "REPLACE_WITH_CUSTOMER_TEMPLATE_ID",
+    "storeTemplateID": "template_ckyri4m",
+    "customerTemplateID": "template_ckyri4m",
     "publicKey": "H4OR1MKdC7n5o8A4G"
   },
   "products": [

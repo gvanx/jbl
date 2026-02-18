@@ -438,10 +438,12 @@
       btn.disabled=true;btn.textContent='PROCESSING...';btn.classList.add('jbl-loading-state');
 
       try{if(EMAIL&&window.emailjs){
-        emailjs.send(EMAIL.serviceID,EMAIL.storeTemplateID,{name:name,email:email,phone:phone,product:currentProduct.name,amount:currSym+' '+total,subtotal:currSym+' '+currentProduct.price,delivery_fee:fee>0?currSym+' '+fee:'N/A',fulfillment:fulfillment==='delivery'?'Delivery':'Pickup',address:address||'N/A',orderId:orderId,timestamp:new Date().toLocaleString()});
+        var deliveryInfo=fulfillment==='delivery'?'Delivery to: '+address:'Pickup at store';
+        var typeLabel=fulfillment==='delivery'?'JBL Product (Delivery +'+currSym+' '+fee+')':'JBL Product (Pickup)';
+        emailjs.send(EMAIL.serviceID,EMAIL.storeTemplateID,{name:name,email:email,whatsapp:phone,product:currentProduct.name,type:typeLabel,amount:currSym+' '+total,delivery:deliveryInfo,orderId:orderId});
       }}catch(e){}
       try{if(EMAIL&&window.emailjs){
-        emailjs.send(EMAIL.serviceID,EMAIL.customerTemplateID,{to_email:email,customer_name:name,product:currentProduct.name,amount:currSym+' '+total,orderId:orderId,fulfillment:fulfillment==='delivery'?'Delivery to: '+address:'Pickup at store',whatsappLink:'https://wa.me/'+CONFIG.whatsappNumber});
+        emailjs.send(EMAIL.serviceID,EMAIL.customerTemplateID,{name:name,email:email,whatsapp:phone,product:currentProduct.name,type:'JBL Product',amount:currSym+' '+total,delivery:fulfillment==='delivery'?'Delivery to: '+address:'Pickup at store',orderId:orderId});
       }}catch(e){}
 
       window.open(sentooLink,'_blank');
