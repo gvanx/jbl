@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="12" fill="#1a1a1a"/>
+  <g>
+    <circle cx="175" cy="110" r="18" fill="none" stroke="#FF6600" stroke-width="3"/>
+    <circle cx="175" cy="110" r="7" fill="#FF6600"/>
+    <line x1="175" y1="128" x2="175" y2="170" stroke="#FF6600" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="175" cy="170" r="4" fill="#FF6600"/>
+    <circle cx="225" cy="110" r="18" fill="none" stroke="#FF6600" stroke-width="3"/>
+    <circle cx="225" cy="110" r="7" fill="#FF6600"/>
+    <line x1="225" y1="128" x2="225" y2="170" stroke="#FF6600" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="225" cy="170" r="4" fill="#FF6600"/>
+  </g>
+  <text x="200" y="225" text-anchor="middle" fill="#FF6600" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold">JBL</text>
+  <text x="200" y="250" text-anchor="middle" fill="#FF6600" font-family="Arial, Helvetica, sans-serif" font-size="14">Tune Buds 2</text>
+</svg>

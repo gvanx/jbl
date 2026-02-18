@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JBL CURACAO | powered by Connections Curacao</title>
+  <meta name="description" content="Original JBL speakers, headsets & earbuds in Curaçao. Pay with Sentoo. Pickup or island delivery. Powered by Connections Curacao." />
+  <meta property="og:title" content="JBL CURACAO – powered by Connections Curacao" />
+  <meta property="og:description" content="Original JBL speakers, headsets & earbuds. Curaçao." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jbl.connectionscuracao.net/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JBL CURACAO – powered by Connections Curacao" />
+  <meta name="twitter:description" content="Original JBL speakers, headsets & earbuds. Curaçao." />
+  <meta name="theme-color" content="#FF6600" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --jbl-black: #0d0d0d;
+      --jbl-surface: #151515;
+      --jbl-card: #1c1c1c;
+      --jbl-card-hover: #242424;
+      --jbl-border: #2a2a2a;
+      --jbl-orange: #FF6600;
+      --jbl-orange-dark: #E05A00;
+      --jbl-orange-glow: rgba(255, 102, 0, 0.25);
+      --jbl-orange-subtle: rgba(255, 102, 0, 0.08);
+      --jbl-white: #FFFFFF;
+      --jbl-text: #E8E8E8;
+      --jbl-text-muted: #777;
+      --jbl-text-dim: #555;
+      --jbl-green: #25D366;
+      --jbl-red: #E53935;
+      --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--jbl-black); color: var(--jbl-text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .jbl-hero { position: relative; min-height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px 24px 48px; overflow: hidden; background: linear-gradient(180deg, #111 0%, var(--jbl-black) 100%); }
+    .jbl-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, var(--jbl-orange-subtle) 0%, transparent 70%); pointer-events: none; }
+    .jbl-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent 0%, var(--jbl-orange) 50%, transparent 100%); }
+    .jbl-hero-waves { position: absolute; inset: 0; pointer-events: none; opacity: 0.04; }
+    .jbl-hero-waves svg { width: 100%; height: 100%; }
+    .jbl-hero h1 { font-family: var(--font-display); font-size: clamp(3.5rem, 10vw, 7rem); letter-spacing: 0.06em; color: var(--jbl-white); margin: 0; line-height: 1; position: relative; z-index: 1; }
+    .jbl-hero h1 span { color: var(--jbl-orange); }
+    .jbl-hero-tagline { font-size: 0.95em; color: var(--jbl-text-muted); margin-top: 8px; position: relative; z-index: 1; }
+    .jbl-hero-tagline a { color: var(--jbl-orange); text-decoration: none; font-weight: 600; }
+    .jbl-hero-tagline a:hover { text-decoration: underline; }
+    .jbl-hero-sub { font-family: var(--font-display); font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--jbl-text-muted); letter-spacing: 0.15em; margin-top: 20px; position: relative; z-index: 1; }
+    .jbl-hero-cta { margin-top: 32px; position: relative; z-index: 1; }
+    .jbl-hero-cta a { display: inline-block; padding: 16px 44px; background: linear-gradient(135deg, var(--jbl-orange) 0%, var(--jbl-orange-dark) 100%); color: var(--jbl-white); font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 0.12em; text-decoration: none; border-radius: var(--radius-md); box-shadow: 0 8px 32px var(--jbl-orange-glow); transition: transform 0.2s, box-shadow 0.2s; }
+    .jbl-hero-cta a:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,102,0,0.4); }
+    .jbl-features { display: flex; justify-content: center; gap: 0; padding: 0 24px; border-top: 1px solid var(--jbl-border); border-bottom: 1px solid var(--jbl-border); background: var(--jbl-surface); flex-wrap: wrap; }
+    .jbl-feature { display: flex; align-items: center; gap: 10px; padding: 18px 28px; font-size: 0.85em; font-weight: 600; color: var(--jbl-text-muted); white-space: nowrap; border-right: 1px solid var(--jbl-border); }
+    .jbl-feature:last-child { border-right: none; }
+    .jbl-feature svg { width: 20px; height: 20px; color: var(--jbl-orange); flex-shrink: 0; }
+    .jbl-container { max-width: 1140px; margin: 0 auto; padding: 40px 24px 80px; }
+    .jbl-search-wrap { margin-bottom: 24px; }
+    .jbl-search { width: 100%; max-width: 460px; margin: 0 auto; display: block; padding: 14px 20px; border: 1px solid var(--jbl-border); border-radius: var(--radius-md); font-size: 0.95em; font-family: var(--font-body); background: var(--jbl-card); color: var(--jbl-text); transition: border-color 0.2s, box-shadow 0.2s; }
+    .jbl-search:focus { outline: none; border-color: var(--jbl-orange); box-shadow: 0 0 0 3px var(--jbl-orange-glow); }
+    .jbl-search::placeholder { color: var(--jbl-text-dim); }
+    .jbl-tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .jbl-tab { background: var(--jbl-card); border: 1px solid var(--jbl-border); padding: 10px 22px; border-radius: var(--radius-md); font-weight: 600; color: var(--jbl-text-muted); cursor: pointer; transition: all 0.2s; font-size: 0.88em; font-family: var(--font-body); min-height: 44px; }
+    .jbl-tab:hover { background: var(--jbl-card-hover); color: var(--jbl-text); border-color: #444; }
+    .jbl-tab.active { background: var(--jbl-orange); color: var(--jbl-white); border-color: var(--jbl-orange); box-shadow: 0 4px 20px var(--jbl-orange-glow); }
+    .jbl-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+    .jbl-meta { font-size: 0.85em; color: var(--jbl-text-dim); }
+    .jbl-sort-wrap { display: flex; align-items: center; gap: 8px; }
+    .jbl-sort-wrap label { font-size: 0.82em; font-weight: 600; color: var(--jbl-text-dim); }
+    .jbl-sort { padding: 8px 12px; border: 1px solid var(--jbl-border); border-radius: var(--radius-sm); font-size: 0.85em; font-family: var(--font-body); background: var(--jbl-card); color: var(--jbl-text); cursor: pointer; }
+    .jbl-sort:focus { outline: none; border-color: var(--jbl-orange); }
+    .jbl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .jbl-card { border: 1px solid var(--jbl-border); border-radius: var(--radius-lg); padding: 0; background: var(--jbl-card); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; overflow: hidden; position: relative; }
+    .jbl-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,102,0,0.15); border-color: rgba(255,102,0,0.3); }
+    .jbl-card-img-wrap { background: var(--jbl-surface); padding: 24px; display: flex; align-items: center; justify-content: center; min-height: 200px; position: relative; }
+    .jbl-card-img { width: 100%; height: 160px; object-fit: contain; }
+    .jbl-card-badge { position: absolute; top: 14px; left: 14px; background: var(--jbl-orange); color: var(--jbl-white); font-size: 0.7em; font-weight: 700; padding: 4px 10px; border-radius: 8px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .jbl-card-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+    .jbl-card-cat { font-size: 0.72em; font-weight: 700; color: var(--jbl-orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .jbl-card-name { font-family: var(--font-display); font-size: 1.4em; color: var(--jbl-white); letter-spacing: 0.03em; margin-bottom: 6px; line-height: 1.1; }
+    .jbl-card-desc { font-size: 0.82em; color: var(--jbl-text-muted); line-height: 1.45; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .jbl-card-colors { font-size: 0.75em; color: var(--jbl-text-dim); margin-bottom: 12px; }
+    .jbl-card-price { font-family: var(--font-display); font-size: 1.8em; color: var(--jbl-orange); letter-spacing: 0.02em; margin-bottom: 16px; margin-top: auto; }
+    .jbl-card-actions { display: flex; gap: 8px; }
+    .jbl-card-actions .jbl-btn { flex: 1; }
+    .jbl-card.out-of-stock { opacity: 0.5; }
+    .jbl-card.out-of-stock .jbl-card-img-wrap { filter: grayscale(0.6); }
+    .jbl-btn { padding: 12px 18px; border: none; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; font-size: 0.88em; transition: all 0.2s ease; text-align: center; text-decoration: none; display: inline-block; font-family: var(--font-body); min-height: 44px; line-height: 1.3; }
+    .jbl-btn-primary { background: linear-gradient(135deg, var(--jbl-orange) 0%, var(--jbl-orange-dark) 100%); color: var(--jbl-white); }
+    .jbl-btn-primary:hover { box-shadow: 0 6px 24px var(--jbl-orange-glow); transform: translateY(-1px); }
+    .jbl-btn-primary:disabled { background: #333; color: #666; cursor: not-allowed; box-shadow: none; transform: none; }
+    .jbl-btn-ghost { background: transparent; color: var(--jbl-text-muted); border: 1px solid var(--jbl-border); }
+    .jbl-btn-ghost:hover { border-color: var(--jbl-orange); color: var(--jbl-orange); background: var(--jbl-orange-subtle); }
+    .jbl-btn-success { background: linear-gradient(135deg, #22a67a 0%, #1a8f63 100%); color: var(--jbl-white); }
+    .jbl-btn-success:hover { box-shadow: 0 6px 24px rgba(34,166,122,0.3); }
+    .jbl-btn-disabled { background: #2a2a2a; color: #555; cursor: not-allowed; }
+    .jbl-skeleton-grid { pointer-events: none; }
+    .jbl-skeleton-card { border: 1px solid var(--jbl-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--jbl-card); }
+    .jbl-skeleton-img { width: 100%; height: 200px; background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%); background-size: 200% 100%; animation: jbl-shimmer 1.4s ease-in-out infinite; }
+    .jbl-skeleton-body { padding: 20px; }
+    .jbl-skeleton-line { height: 14px; border-radius: 6px; margin-bottom: 10px; background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%); background-size: 200% 100%; animation: jbl-shimmer 1.4s ease-in-out infinite; }
+    .jbl-skeleton-line.short { width: 40%; }
+    .jbl-skeleton-line.price { height: 24px; width: 30%; margin-top: 12px; }
+    @keyframes jbl-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    .jbl-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 1001; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .jbl-overlay.visible { display: flex; }
+    .jbl-modal { background: var(--jbl-surface); border: 1px solid var(--jbl-border); border-radius: 24px; max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 32px; box-shadow: 0 32px 80px rgba(0,0,0,0.5); position: relative; }
+    .jbl-modal h2 { font-family: var(--font-display); font-size: 1.8em; color: var(--jbl-white); letter-spacing: 0.04em; margin: 0 0 6px; }
+    .jbl-modal-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border: 1px solid var(--jbl-border); border-radius: 50%; background: var(--jbl-card); color: var(--jbl-text-muted); cursor: pointer; font-size: 1.2em; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .jbl-modal-close:hover { border-color: var(--jbl-orange); color: var(--jbl-orange); }
+    .jbl-qv-img { width: 100%; height: 220px; object-fit: contain; background: var(--jbl-card); border-radius: var(--radius-md); margin-bottom: 16px; }
+    .jbl-qv-cat { font-size: 0.72em; font-weight: 700; color: var(--jbl-orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+    .jbl-qv-name { font-family: var(--font-display); font-size: 2em; color: var(--jbl-white); letter-spacing: 0.03em; margin-bottom: 8px; }
+    .jbl-qv-desc { font-size: 0.9em; color: var(--jbl-text-muted); line-height: 1.5; margin-bottom: 12px; }
+    .jbl-qv-colors { font-size: 0.82em; color: var(--jbl-text-dim); margin-bottom: 16px; }
+    .jbl-qv-specs { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+    .jbl-qv-specs td { padding: 8px 0; font-size: 0.85em; border-bottom: 1px solid var(--jbl-border); }
+    .jbl-qv-specs td:first-child { color: var(--jbl-text-dim); font-weight: 600; text-transform: capitalize; width: 40%; }
+    .jbl-qv-specs td:last-child { color: var(--jbl-text); }
+    .jbl-qv-price { font-family: var(--font-display); font-size: 2.2em; color: var(--jbl-orange); margin-bottom: 16px; }
+    .jbl-form { margin-top: 16px; }
+    .jbl-label { display: block; font-size: 0.78em; font-weight: 700; color: var(--jbl-text-dim); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .jbl-input { width: 100%; padding: 12px 14px; margin-bottom: 12px; border: 1px solid var(--jbl-border); border-radius: var(--radius-sm); font-size: 0.95em; font-family: var(--font-body); background: var(--jbl-card); color: var(--jbl-text); transition: border-color 0.2s, box-shadow 0.2s; }
+    .jbl-input:focus { outline: none; border-color: var(--jbl-orange); box-shadow: 0 0 0 3px var(--jbl-orange-glow); }
+    .jbl-input.error { border-color: var(--jbl-red); }
+    .jbl-input::placeholder { color: var(--jbl-text-dim); }
+    .jbl-textarea { resize: vertical; min-height: 60px; }
+    .jbl-error { font-size: 0.78em; color: var(--jbl-red); margin-top: -8px; margin-bottom: 8px; display: none; }
+    .jbl-radio-group { background: var(--jbl-card); padding: 12px; border-radius: var(--radius-sm); margin-bottom: 12px; border: 1px solid var(--jbl-border); }
+    .jbl-radio-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9em; font-weight: 600; cursor: pointer; color: var(--jbl-text); }
+    .jbl-radio-row:last-child { margin-bottom: 0; }
+    .jbl-radio-row input { accent-color: var(--jbl-orange); width: 18px; height: 18px; }
+    .jbl-delivery-fee { font-size: 0.85em; color: var(--jbl-orange); font-weight: 700; }
+    .jbl-order-summary { background: var(--jbl-card); border: 1px solid var(--jbl-border); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 16px; }
+    .jbl-order-row { display: flex; justify-content: space-between; font-size: 0.9em; padding: 4px 0; color: var(--jbl-text-muted); }
+    .jbl-order-row.total { border-top: 1px solid var(--jbl-border); margin-top: 6px; padding-top: 10px; font-weight: 700; font-size: 1em; color: var(--jbl-white); }
+    .jbl-order-val { color: var(--jbl-text); }
+    .jbl-order-row.total .jbl-order-val { color: var(--jbl-orange); font-family: var(--font-display); font-size: 1.3em; }
+    .jbl-terms-chk { font-size: 0.85em; color: var(--jbl-text-muted); display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px; cursor: pointer; background: var(--jbl-card); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--jbl-border); }
+    .jbl-terms-chk input { margin-top: 2px; accent-color: var(--jbl-orange); width: 16px; height: 16px; flex-shrink: 0; }
+    .jbl-terms-chk a { color: var(--jbl-orange); }
+    .jbl-confirm { display: none; text-align: center; padding: 24px; background: rgba(34,166,122,0.08); border: 1px solid rgba(34,166,122,0.2); border-radius: var(--radius-lg); margin-top: 16px; }
+    .jbl-confirm.visible { display: block; }
+    .jbl-confirm h3 { font-family: var(--font-display); font-size: 1.6em; color: #22a67a; letter-spacing: 0.04em; margin: 0 0 8px; }
+    .jbl-confirm .jbl-ref { font-size: 1.1em; font-weight: 700; color: var(--jbl-white); margin-bottom: 12px; }
+    .jbl-confirm p { font-size: 0.9em; color: var(--jbl-text-muted); line-height: 1.5; margin: 8px 0; }
+    .jbl-confirm .jbl-btn { margin-top: 8px; }
+    .jbl-loading-state { opacity: 0.6; pointer-events: none; }
+    .jbl-faq { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--jbl-border); }
+    .jbl-faq h3 { font-family: var(--font-display); font-size: 1.6em; color: var(--jbl-white); letter-spacing: 0.06em; margin: 0 0 16px; }
+    .jbl-faq-item { border: 1px solid var(--jbl-border); border-radius: var(--radius-sm); margin-bottom: 8px; overflow: hidden; }
+    .jbl-faq-q { width: 100%; padding: 14px 16px; min-height: 48px; text-align: left; background: var(--jbl-card); border: none; font-family: var(--font-body); font-weight: 700; font-size: 0.92em; color: var(--jbl-text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .jbl-faq-q:hover { background: var(--jbl-card-hover); }
+    .jbl-faq-q::after { content: '+'; font-size: 1.3em; color: var(--jbl-orange); flex-shrink: 0; margin-left: 8px; }
+    .jbl-faq-item.open .jbl-faq-q::after { content: '\2212'; }
+    .jbl-faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .jbl-faq-item.open .jbl-faq-a { max-height: 300px; }
+    .jbl-faq-a-inner { padding: 12px 0 16px; font-size: 0.88em; line-height: 1.6; color: var(--jbl-text-muted); }
+    .jbl-footer { text-align: center; padding: 40px 24px 32px; border-top: 1px solid var(--jbl-border); font-size: 0.85em; color: var(--jbl-text-dim); }
+    .jbl-footer a { color: var(--jbl-orange); text-decoration: none; font-weight: 500; }
+    .jbl-footer a:hover { text-decoration: underline; }
+    .jbl-footer-locations { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin: 16px 0; }
+    .jbl-footer-loc { font-size: 0.9em; line-height: 1.5; }
+    .jbl-footer-loc strong { color: var(--jbl-text-muted); }
+    .jbl-social { display: flex; gap: 12px; justify-content: center; margin: 16px 0; }
+    .jbl-social-link { display: inline-flex; align-items: center; gap: 6px; color: var(--jbl-text-dim); text-decoration: none; font-weight: 600; font-size: 0.88em; padding: 8px 16px; border-radius: var(--radius-sm); border: 1px solid var(--jbl-border); transition: all 0.2s; }
+    .jbl-social-link:hover { color: var(--jbl-orange); border-color: var(--jbl-orange); background: var(--jbl-orange-subtle); }
+    .jbl-social-link svg { width: 18px; height: 18px; fill: currentColor; }
+    .jbl-footer-wa { margin-top: 14px; }
+    .jbl-footer-wa a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: var(--jbl-green); color: var(--jbl-white); border-radius: var(--radius-md); font-weight: 600; text-decoration: none; transition: all 0.2s; }
+    .jbl-footer-wa a:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,211,102,0.3); text-decoration: none; }
+    .jbl-wa-fab { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; border-radius: 50%; background: var(--jbl-green); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 999; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; }
+    .jbl-wa-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .jbl-wa-fab svg { width: 28px; height: 28px; fill: white; }
+    .jbl-back-top { position: fixed; bottom: 90px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--jbl-orange); color: var(--jbl-white); border: none; cursor: pointer; font-size: 1.1em; z-index: 999; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 16px var(--jbl-orange-glow); transition: transform 0.2s; }
+    .jbl-back-top.visible { display: flex; }
+    .jbl-back-top:hover { transform: translateY(-2px); }
+    .jbl-toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); background: var(--jbl-surface); border: 1px solid var(--jbl-orange); color: var(--jbl-text); padding: 12px 28px; border-radius: var(--radius-md); font-size: 0.9em; z-index: 1002; display: none; box-shadow: 0 8px 28px rgba(0,0,0,0.4); }
+    .jbl-toast.visible { display: block; animation: jbl-fadeUp 0.3s ease; }
+    @keyframes jbl-fadeUp { from { opacity: 0; transform: translate(-50%, 8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+    .jbl-empty { text-align: center; padding: 48px 24px; color: var(--jbl-text-dim); }
+    .jbl-empty strong { display: block; margin-bottom: 8px; color: var(--jbl-text-muted); font-size: 1.1em; }
+    .jbl-grid .jbl-card { opacity: 0; transform: translateY(16px); animation: jbl-cardIn 0.4s ease forwards; }
+    .jbl-grid .jbl-card:nth-child(1) { animation-delay: 0.03s; }
+    .jbl-grid .jbl-card:nth-child(2) { animation-delay: 0.07s; }
+    .jbl-grid .jbl-card:nth-child(3) { animation-delay: 0.11s; }
+    .jbl-grid .jbl-card:nth-child(4) { animation-delay: 0.15s; }
+    .jbl-grid .jbl-card:nth-child(5) { animation-delay: 0.19s; }
+    .jbl-grid .jbl-card:nth-child(6) { animation-delay: 0.23s; }
+    .jbl-grid .jbl-card:nth-child(7) { animation-delay: 0.27s; }
+    .jbl-grid .jbl-card:nth-child(8) { animation-delay: 0.31s; }
+    .jbl-grid .jbl-card:nth-child(n+9) { animation-delay: 0.35s; }
+    @keyframes jbl-cardIn { to { opacity: 1; transform: translateY(0); } }
+    .jbl-terms-modal { background: var(--jbl-surface); border: 1px solid var(--jbl-border); border-radius: 20px; max-width: 560px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 28px; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .jbl-terms-modal h3 { font-family: var(--font-display); font-size: 1.5em; color: var(--jbl-white); margin: 0 0 12px; letter-spacing: 0.04em; }
+    .jbl-terms-modal p { margin: 0 0 10px; line-height: 1.6; font-size: 0.9em; color: var(--jbl-text-muted); }
+    @media (max-width: 700px) {
+      .jbl-hero { min-height: 40vh; padding: 40px 16px 36px; }
+      .jbl-hero h1 { font-size: clamp(2.8rem, 12vw, 4rem); }
+      .jbl-container { padding: 24px 16px 80px; }
+      .jbl-grid { grid-template-columns: 1fr; }
+      .jbl-feature { padding: 12px 16px; font-size: 0.78em; border-right: none; border-bottom: 1px solid var(--jbl-border); flex: 1 0 50%; justify-content: center; }
+      .jbl-feature:nth-child(3), .jbl-feature:nth-child(4) { border-bottom: none; }
+      .jbl-toolbar { flex-direction: column; align-items: stretch; }
+      .jbl-modal { padding: 24px 18px; }
+      .jbl-footer-locations { flex-direction: column; gap: 12px; }
+    }
+    @media print { .jbl-hero, .jbl-wa-fab, .jbl-back-top, .jbl-toast, .jbl-overlay { display: none !important; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "Store", "name": "JBL Curacao",
+    "description": "Original JBL speakers, headsets & earbuds in Curaçao. Pay with Sentoo.",
+    "url": "https://jbl.connectionscuracao.net", "telephone": "+5999-461-8989",
+    "address": { "@type": "PostalAddress", "addressCountry": "CW", "addressLocality": "Curaçao" },
+    "sameAs": ["https://instagram.com/connectionscuracao", "https://facebook.com/connectionscuracao123"],
+    "paymentAccepted": "Sentoo", "currenciesAccepted": "ANG", "priceRange": "ƒ35 - ƒ799"
+  }
+  </script>
+</head>
+<body>
+  <section class="jbl-hero">
+    <div class="jbl-hero-waves"><svg viewBox="0 0 1200 400" preserveAspectRatio="none"><path d="M0 200 Q150 100 300 200 T600 200 T900 200 T1200 200" fill="none" stroke="currentColor" stroke-width="1"/><path d="M0 220 Q150 120 300 220 T600 220 T900 220 T1200 220" fill="none" stroke="currentColor" stroke-width="0.5"/><path d="M0 180 Q150 80 300 180 T600 180 T900 180 T1200 180" fill="none" stroke="currentColor" stroke-width="0.5"/></svg></div>
+    <h1>JBL <span>CURACAO</span></h1>
+    <div class="jbl-hero-tagline">powered by <a href="https://connectionscuracao.net" target="_blank" rel="noopener">Connections Curacao</a></div>
+    <div class="jbl-hero-sub">PREMIUM SOUND &middot; ISLAND LIFE</div>
+    <div class="jbl-hero-cta"><a href="#jbl-catalog">SHOP NOW</a></div>
+  </section>
+  <div class="jbl-features">
+    <div class="jbl-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Original JBL</div>
+    <div class="jbl-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Sentoo Payment</div>
+    <div class="jbl-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>WhatsApp Support</div>
+    <div class="jbl-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Pickup or Delivery</div>
+  </div>
+  <div class="jbl-container" id="jbl-catalog">
+    <div class="jbl-search-wrap"><input type="text" class="jbl-search" id="jbl-search" placeholder="Search speakers, headsets, earbuds..." aria-label="Search products" /></div>
+    <div id="jbl-tabs" class="jbl-tabs"></div>
+    <div class="jbl-toolbar">
+      <div class="jbl-meta" id="jbl-meta"></div>
+      <div class="jbl-sort-wrap"><label for="jbl-sort">Sort</label><select id="jbl-sort" class="jbl-sort" aria-label="Sort products"><option value="featured">Featured</option><option value="price-asc">Price: Low to High</option><option value="price-desc">Price: High to Low</option><option value="name-asc">Name A-Z</option></select></div>
+    </div>
+    <div id="jbl-loading"><div class="jbl-grid jbl-skeleton-grid"><div class="jbl-skeleton-card"><div class="jbl-skeleton-img"></div><div class="jbl-skeleton-body"><div class="jbl-skeleton-line short"></div><div class="jbl-skeleton-line"></div><div class="jbl-skeleton-line price"></div></div></div><div class="jbl-skeleton-card"><div class="jbl-skeleton-img"></div><div class="jbl-skeleton-body"><div class="jbl-skeleton-line short"></div><div class="jbl-skeleton-line"></div><div class="jbl-skeleton-line price"></div></div></div><div class="jbl-skeleton-card"><div class="jbl-skeleton-img"></div><div class="jbl-skeleton-body"><div class="jbl-skeleton-line short"></div><div class="jbl-skeleton-line"></div><div class="jbl-skeleton-line price"></div></div></div><div class="jbl-skeleton-card"><div class="jbl-skeleton-img"></div><div class="jbl-skeleton-body"><div class="jbl-skeleton-line short"></div><div class="jbl-skeleton-line"></div><div class="jbl-skeleton-line price"></div></div></div><div class="jbl-skeleton-card"><div class="jbl-skeleton-img"></div><div class="jbl-skeleton-body"><div class="jbl-skeleton-line short"></div><div class="jbl-skeleton-line"></div><div class="jbl-skeleton-line price"></div></div></div><div class="jbl-skeleton-card"><div class="jbl-skeleton-img"></div><div class="jbl-skeleton-body"><div class="jbl-skeleton-line short"></div><div class="jbl-skeleton-line"></div><div class="jbl-skeleton-line price"></div></div></div></div></div>
+    <div id="jbl-grid" class="jbl-grid"></div>
+    <section class="jbl-faq" id="jbl-faq"><h3>FAQ</h3><div id="jbl-faq-list"></div></section>
+  </div>
+  <footer class="jbl-footer">
+    <div><a href="https://connectionscuracao.net" target="_blank" rel="noopener">Connections Curacao</a></div>
+    <div class="jbl-footer-locations"><div class="jbl-footer-loc"><strong>Punda</strong><br>Breedestraat 23</div><div class="jbl-footer-loc"><strong>Otrobanda</strong><br>Breedestraat 96</div></div>
+    <div class="jbl-social">
+      <a href="https://instagram.com/connectionscuracao" target="_blank" rel="noopener" class="jbl-social-link"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
+      <a href="https://facebook.com/connectionscuracao123" target="_blank" rel="noopener" class="jbl-social-link"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a>
+    </div>
+    <div class="jbl-footer-wa"><a href="#" id="jbl-footer-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Contact on WhatsApp</a></div>
+  </footer>
+  <a href="#" id="jbl-wa-fab" class="jbl-wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <button type="button" class="jbl-back-top" id="jbl-back-top" aria-label="Back to top">&uarr;</button>
+  <div class="jbl-overlay" id="jbl-terms-overlay" aria-modal="true" hidden>
+    <div class="jbl-terms-modal">
+      <h3>TERMS &amp; REFUND POLICY</h3>
+      <p>By placing an order you agree to the following terms.</p>
+      <p><strong>Payment:</strong> All payments are processed via Sentoo. Prices are in ANG. Complete your payment via the Sentoo link provided at checkout.</p>
+      <p><strong>Fulfillment:</strong> Products can be picked up at our store in Punda or Otrobanda, or delivered for &#402; 35. We'll confirm details via WhatsApp.</p>
+      <p><strong>Refunds:</strong> Refunds are considered on a case-by-case basis. Contact us via WhatsApp with your order reference. Opened or used products cannot be returned.</p>
+      <p><strong>Warranty:</strong> All JBL products come with manufacturer warranty. Contact us for warranty claims.</p>
+      <button type="button" class="jbl-btn jbl-btn-ghost" id="jbl-terms-close" style="margin-top:16px;">Close</button>
+    </div>
+  </div>
+  <div class="jbl-overlay" id="jbl-quickview" aria-modal="true" hidden>
+    <div class="jbl-modal"><button type="button" class="jbl-modal-close" id="jbl-qv-close" aria-label="Close">&times;</button><div id="jbl-qv-body"></div></div>
+  </div>
+  <div class="jbl-overlay" id="jbl-checkout-overlay" aria-modal="true" hidden>
+    <div class="jbl-modal">
+      <button type="button" class="jbl-modal-close" id="jbl-checkout-close" aria-label="Close">&times;</button>
+      <h2>CHECKOUT</h2>
+      <div id="jbl-co-product" style="font-size:0.9em;color:var(--jbl-text-muted);margin-bottom:16px;"></div>
+      <div class="jbl-form" id="jbl-co-form">
+        <div class="jbl-label">Your name</div>
+        <input type="text" class="jbl-input" id="jbl-co-name" placeholder="Full name" />
+        <div class="jbl-error" id="jbl-co-name-err">Name is required</div>
+        <div class="jbl-label">Email address</div>
+        <input type="email" class="jbl-input" id="jbl-co-email" placeholder="your@email.com" />
+        <div class="jbl-error" id="jbl-co-email-err">Valid email is required</div>
+        <div class="jbl-label">Phone / WhatsApp</div>
+        <input type="text" class="jbl-input" id="jbl-co-phone" placeholder="+5999 ..." />
+        <div class="jbl-error" id="jbl-co-phone-err">Phone number is required</div>
+        <div class="jbl-label">Fulfillment</div>
+        <div class="jbl-radio-group">
+          <label class="jbl-radio-row"><input type="radio" name="jbl-fulfillment" value="pickup" checked /> Pickup <span style="color:var(--jbl-text-dim);font-weight:400;font-size:0.85em;">(Free)</span></label>
+          <label class="jbl-radio-row"><input type="radio" name="jbl-fulfillment" value="delivery" /> Delivery <span class="jbl-delivery-fee">(+&#402; 35)</span></label>
+        </div>
+        <div id="jbl-co-addr-wrap" style="display:none;">
+          <div class="jbl-label">Delivery address</div>
+          <textarea class="jbl-input jbl-textarea" id="jbl-co-address" placeholder="Street, area, landmark..."></textarea>
+          <div class="jbl-error" id="jbl-co-address-err">Address is required for delivery</div>
+        </div>
+        <div class="jbl-order-summary" id="jbl-co-summary"></div>
+        <label class="jbl-terms-chk">
+          <input type="checkbox" id="jbl-co-terms" />
+          <span>I agree to the <a href="#" id="jbl-co-terms-link">Terms &amp; Refund Policy</a>.</span>
+        </label>
+        <button type="button" class="jbl-btn jbl-btn-primary" id="jbl-co-submit" disabled style="width:100%;font-size:1em;">PAY WITH SENTOO</button>
+      </div>
+      <div class="jbl-confirm" id="jbl-co-confirm"></div>
+    </div>
+  </div>
+  <div class="jbl-toast" id="jbl-toast" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+  (function(){
+    var CONFIG, EMAIL, products, currSym = '\u0192', currentProduct = null;
+    var searchEl, sortEl, gridEl, metaEl, tabsEl, activeCat = 'All';
+
+    function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+    function $(id) { return document.getElementById(id); }
+    function toast(m) { var e=$('jbl-toast'); if(!e)return; e.textContent=m; e.classList.add('visible'); setTimeout(function(){e.classList.remove('visible');},2500); }
+    function openOv(id) { var e=$(id); if(e){e.classList.add('visible');e.removeAttribute('hidden');} }
+    function closeOv(id) { var e=$(id); if(e){e.classList.remove('visible');e.setAttribute('hidden','');} }
+
+    function loadData(cb) {
+      fetch('data/products.json').then(function(r){return r.ok?r.json():Promise.reject();}).then(function(d){
+        CONFIG=d.config; EMAIL=d.email; products=d.products||[]; cb();
+      }).catch(function(){cb();});
+    }
+
+    function initFaq() {
+      var el=$('jbl-faq'); if(!el)return;
+      el.addEventListener('click',function(e){
+        var q=e.target.closest('.jbl-faq-q'); if(!q)return;
+        var item=q.closest('.jbl-faq-item'); if(!item)return;
+        e.preventDefault(); var open=item.classList.toggle('open');
+        q.setAttribute('aria-expanded',open);
+      });
+    }
+    function initBackTop() {
+      var btn=$('jbl-back-top'); if(!btn)return;
+      window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>400);},{passive:true});
+      btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+    }
+    function initKeyboard() {
+      document.addEventListener('keydown',function(e){
+        if(e.key==='Escape'){closeOv('jbl-terms-overlay');closeOv('jbl-quickview');closeOv('jbl-checkout-overlay');}
+        if(e.key==='/'&&document.activeElement.tagName!=='INPUT'&&document.activeElement.tagName!=='TEXTAREA'){e.preventDefault();var s=$('jbl-search');if(s)s.focus();}
+      });
+    }
+    function initTerms() {
+      var link=$('jbl-co-terms-link');
+      if(link)link.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();openOv('jbl-terms-overlay');});
+      var c=$('jbl-terms-close'); if(c)c.addEventListener('click',function(){closeOv('jbl-terms-overlay');});
+      var ov=$('jbl-terms-overlay'); if(ov)ov.addEventListener('click',function(e){if(e.target===ov)closeOv('jbl-terms-overlay');});
+    }
+    function initEmailJS(){try{if(window.emailjs&&EMAIL)emailjs.init(EMAIL.publicKey);}catch(e){}}
+    function initHeroScroll() {
+      var cta=document.querySelector('.jbl-hero-cta a');
+      if(cta)cta.addEventListener('click',function(e){e.preventDefault();var t=$('jbl-catalog');if(t)t.scrollIntoView({behavior:'smooth'});});
+    }
+
+    // Quickview
+    function openQV(p) {
+      var body=$('jbl-qv-body'); if(!body)return;
+      var colorsHtml = p.colors&&p.colors.length ? '<div class="jbl-qv-colors">Colors: '+p.colors.map(esc).join(', ')+'</div>' : '';
+      var specsHtml = '';
+      if(p.specs){var rows='';for(var k in p.specs){if(p.specs.hasOwnProperty(k)){rows+='<tr><td>'+esc(k.replace(/_/g,' '))+'</td><td>'+esc(p.specs[k])+'</td></tr>';}}if(rows)specsHtml='<table class="jbl-qv-specs">'+rows+'</table>';}
+      body.textContent = '';
+      var frag = document.createDocumentFragment();
+      var img = document.createElement('img'); img.src=p.image; img.alt=p.name; img.className='jbl-qv-img'; frag.appendChild(img);
+      var tmp = document.createElement('div');
+      tmp.innerHTML = '<div class="jbl-qv-cat">'+esc(p.cat)+'</div><div class="jbl-qv-name">'+esc(p.name)+'</div><div class="jbl-qv-desc">'+esc(p.description)+'</div>'+colorsHtml+specsHtml+'<div class="jbl-qv-price">'+currSym+' '+p.price+'</div>';
+      while(tmp.firstChild) frag.appendChild(tmp.firstChild);
+      var btn = document.createElement('button');
+      btn.type='button'; btn.style.cssText='width:100%';
+      if(p.inStock!==false){btn.className='jbl-btn jbl-btn-primary';btn.textContent='BUY NOW';btn.addEventListener('click',function(){closeOv('jbl-quickview');openCheckout(p);});}
+      else{btn.className='jbl-btn jbl-btn-disabled';btn.disabled=true;btn.textContent='UNAVAILABLE';}
+      frag.appendChild(btn);
+      body.appendChild(frag);
+      openOv('jbl-quickview');
+    }
+
+    // Checkout
+    function clearErrors(){
+      ['jbl-co-name','jbl-co-email','jbl-co-phone','jbl-co-address'].forEach(function(id){
+        var inp=$(id);if(inp)inp.classList.remove('error');
+        var err=$(id+'-err');if(err)err.style.display='none';
+      });
+    }
+    function showErr(id){var inp=$(id);if(inp)inp.classList.add('error');var err=$(id+'-err');if(err)err.style.display='block';}
+
+    function updateSummary() {
+      if(!currentProduct)return;
+      var isDel=document.querySelector('input[name="jbl-fulfillment"]:checked').value==='delivery';
+      var fee=isDel?CONFIG.deliveryFee:0, total=currentProduct.price+fee;
+      var el=$('jbl-co-summary'); if(!el)return;
+      var h='<div class="jbl-order-row"><span>'+esc(currentProduct.name)+'</span><span class="jbl-order-val">'+currSym+' '+currentProduct.price+'</span></div>';
+      if(isDel)h+='<div class="jbl-order-row"><span>Delivery</span><span class="jbl-order-val">'+currSym+' '+fee+'</span></div>';
+      h+='<div class="jbl-order-row total"><span>Total</span><span class="jbl-order-val">'+currSym+' '+total+'</span></div>';
+      el.innerHTML=h;
+      var btn=$('jbl-co-submit');if(btn)btn.textContent='PAY '+currSym+' '+total+' WITH SENTOO';
+    }
+
+    function openCheckout(p) {
+      currentProduct=p;
+      var prodEl=$('jbl-co-product');
+      if(prodEl){prodEl.textContent='';var b=document.createElement('strong');b.textContent=p.name;prodEl.appendChild(b);prodEl.appendChild(document.createTextNode(' \u2014 '+currSym+' '+p.price));}
+      var form=$('jbl-co-form'),confirm=$('jbl-co-confirm');
+      if(form)form.style.display='block';
+      if(confirm){confirm.classList.remove('visible');confirm.textContent='';}
+      $('jbl-co-name').value='';$('jbl-co-email').value='';$('jbl-co-phone').value='';$('jbl-co-address').value='';
+      $('jbl-co-terms').checked=false;$('jbl-co-submit').disabled=true;
+      document.querySelector('input[name="jbl-fulfillment"][value="pickup"]').checked=true;
+      $('jbl-co-addr-wrap').style.display='none';
+      clearErrors(); updateSummary(); openOv('jbl-checkout-overlay');
+    }
+
+    function handleSubmit() {
+      if(!currentProduct||!CONFIG)return;
+      clearErrors();
+      var name=$('jbl-co-name').value.trim(),email=$('jbl-co-email').value.trim(),phone=$('jbl-co-phone').value.trim();
+      var fulfillment=document.querySelector('input[name="jbl-fulfillment"]:checked').value;
+      var address=$('jbl-co-address').value.trim();
+      var valid=true;
+      if(!name){showErr('jbl-co-name');valid=false;}
+      if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showErr('jbl-co-email');valid=false;}
+      if(!phone){showErr('jbl-co-phone');valid=false;}
+      if(fulfillment==='delivery'&&!address){showErr('jbl-co-address');valid=false;}
+      if(!valid)return;
+
+      var fee=fulfillment==='delivery'?CONFIG.deliveryFee:0, total=currentProduct.price+fee;
+      var orderId='JBL-'+Date.now().toString(36).toUpperCase()+Math.floor(Math.random()*100);
+      var sentooLink=CONFIG.sentooBaseUrl+'/'+Math.round(total*100);
+      var btn=$('jbl-co-submit');
+      btn.disabled=true;btn.textContent='PROCESSING...';btn.classList.add('jbl-loading-state');
+
+      try{if(EMAIL&&window.emailjs){
+        emailjs.send(EMAIL.serviceID,EMAIL.storeTemplateID,{name:name,email:email,phone:phone,product:currentProduct.name,amount:currSym+' '+total,subtotal:currSym+' '+currentProduct.price,delivery_fee:fee>0?currSym+' '+fee:'N/A',fulfillment:fulfillment==='delivery'?'Delivery':'Pickup',address:address||'N/A',orderId:orderId,timestamp:new Date().toLocaleString()});
+      }}catch(e){}
+      try{if(EMAIL&&window.emailjs){
+        emailjs.send(EMAIL.serviceID,EMAIL.customerTemplateID,{to_email:email,customer_name:name,product:currentProduct.name,amount:currSym+' '+total,orderId:orderId,fulfillment:fulfillment==='delivery'?'Delivery to: '+address:'Pickup at store',whatsappLink:'https://wa.me/'+CONFIG.whatsappNumber});
+      }}catch(e){}
+
+      window.open(sentooLink,'_blank');
+
+      setTimeout(function(){
+        btn.classList.remove('jbl-loading-state');
+        $('jbl-co-form').style.display='none';
+        var confirm=$('jbl-co-confirm');
+        var waMsg=encodeURIComponent('Hi, I just placed an order for '+currentProduct.name+' - ref '+orderId+'. '+(fulfillment==='delivery'?'Delivery to: '+address:'I will pick up at the store.')+' Please confirm when payment is received.');
+        var waLink='https://wa.me/'+CONFIG.whatsappNumber+'?text='+waMsg;
+
+        confirm.textContent='';
+        var h3=document.createElement('h3');h3.textContent='ORDER PLACED \u2713';confirm.appendChild(h3);
+        var ref=document.createElement('div');ref.className='jbl-ref';ref.textContent='#'+orderId;confirm.appendChild(ref);
+        var info=document.createElement('p');
+        var strong=document.createElement('strong');strong.textContent=currentProduct.name;info.appendChild(strong);
+        info.appendChild(document.createElement('br'));
+        info.appendChild(document.createTextNode(currSym+' '+total+(fee>0?' (incl. '+currSym+' '+fee+' delivery)':'')));
+        confirm.appendChild(info);
+        var note=document.createElement('p');note.textContent='Complete your payment via Sentoo. We\'ll confirm your order via WhatsApp once received.';confirm.appendChild(note);
+        var sentooBtn=document.createElement('a');sentooBtn.href=sentooLink;sentooBtn.target='_blank';sentooBtn.className='jbl-btn jbl-btn-ghost';sentooBtn.textContent='Reopen Sentoo';sentooBtn.style.marginRight='8px';confirm.appendChild(sentooBtn);
+        var waBtn=document.createElement('a');waBtn.href=waLink;waBtn.target='_blank';waBtn.className='jbl-btn jbl-btn-success';waBtn.textContent='Message us on WhatsApp';waBtn.style.marginTop='8px';confirm.appendChild(waBtn);
+        confirm.classList.add('visible');
+      },600);
+    }
+
+    function initCheckout() {
+      document.querySelectorAll('input[name="jbl-fulfillment"]').forEach(function(r){
+        r.addEventListener('change',function(){
+          $('jbl-co-addr-wrap').style.display=r.value==='delivery'&&r.checked?'block':'none';
+          updateSummary();
+        });
+      });
+      $('jbl-co-terms').addEventListener('change',function(){$('jbl-co-submit').disabled=!this.checked;});
+      $('jbl-checkout-close').addEventListener('click',function(){closeOv('jbl-checkout-overlay');});
+      $('jbl-checkout-overlay').addEventListener('click',function(e){if(e.target===this)closeOv('jbl-checkout-overlay');});
+      $('jbl-co-submit').addEventListener('click',handleSubmit);
+    }
+
+    // Rendering
+    function getHash(){return(location.hash||'').replace(/^#/,'')||'All';}
+    function setHash(c){try{location.hash=c==='All'?'':c;}catch(e){}}
+
+    function filterProducts(){
+      var list=products;
+      if(activeCat!=='All')list=list.filter(function(p){return p.cat===activeCat;});
+      var q=searchEl&&searchEl.value?searchEl.value.trim().toLowerCase():'';
+      if(q)list=list.filter(function(p){
+        return(p.name&&p.name.toLowerCase().indexOf(q)!==-1)||(p.cat&&p.cat.toLowerCase().indexOf(q)!==-1)||(p.description&&p.description.toLowerCase().indexOf(q)!==-1)||(p.colors&&p.colors.join(' ').toLowerCase().indexOf(q)!==-1);
+      });
+      return list;
+    }
+
+    function updateTabs(){
+      var cats=['All','Speakers','Headsets','Earbuds'];
+      tabsEl.textContent='';
+      cats.forEach(function(cat){
+        var count=cat==='All'?products.length:products.filter(function(p){return p.cat===cat;}).length;
+        var btn=document.createElement('button');btn.type='button';
+        btn.className='jbl-tab'+(cat===activeCat?' active':'');
+        btn.setAttribute('data-cat',cat);btn.textContent=cat+' ('+count+')';
+        btn.addEventListener('click',function(){activeCat=cat;setHash(cat);updateTabs();updateGrid();});
+        tabsEl.appendChild(btn);
+      });
+    }
+
+    function updateGrid(){
+      var filtered=filterProducts();
+      var order=sortEl?sortEl.value:'featured';
+      if(order==='featured')filtered=filtered.slice().sort(function(a,b){return(b.featured?1:0)-(a.featured?1:0);});
+      else if(order==='price-asc')filtered=filtered.slice().sort(function(a,b){return a.price-b.price;});
+      else if(order==='price-desc')filtered=filtered.slice().sort(function(a,b){return b.price-a.price;});
+      else if(order==='name-asc')filtered=filtered.slice().sort(function(a,b){return a.name.localeCompare(b.name);});
+
+      metaEl.textContent=filtered.length+' product'+(filtered.length!==1?'s':'');
+      gridEl.textContent='';
+      if(filtered.length===0){
+        var empty=document.createElement('div');empty.className='jbl-empty';
+        var s=document.createElement('strong');s.textContent='No products found';empty.appendChild(s);
+        empty.appendChild(document.createTextNode('Try a different search or category.'));
+        gridEl.appendChild(empty);return;
+      }
+
+      filtered.forEach(function(p){
+        var card=document.createElement('div');
+        card.className='jbl-card'+(p.inStock===false?' out-of-stock':'');
+
+        // Image wrap
+        var imgWrap=document.createElement('div');imgWrap.className='jbl-card-img-wrap';
+        if(p.badge){var badge=document.createElement('div');badge.className='jbl-card-badge';badge.textContent=p.badge;imgWrap.appendChild(badge);}
+        var img=document.createElement('img');img.className='jbl-card-img';img.src=p.image;img.alt=p.name;img.loading='lazy';imgWrap.appendChild(img);
+        card.appendChild(imgWrap);
+
+        // Body
+        var body=document.createElement('div');body.className='jbl-card-body';
+        var cat=document.createElement('div');cat.className='jbl-card-cat';cat.textContent=p.cat;body.appendChild(cat);
+        var name=document.createElement('div');name.className='jbl-card-name';name.textContent=p.name;body.appendChild(name);
+        var desc=document.createElement('div');desc.className='jbl-card-desc';desc.textContent=p.description;body.appendChild(desc);
+        if(p.colors&&p.colors.length){var colors=document.createElement('div');colors.className='jbl-card-colors';colors.textContent=p.colors.join(' \u00B7 ');body.appendChild(colors);}
+        var price=document.createElement('div');price.className='jbl-card-price';price.textContent=currSym+' '+p.price;body.appendChild(price);
+
+        // Actions
+        var actions=document.createElement('div');actions.className='jbl-card-actions';
+        if(p.inStock!==false){
+          var buyBtn=document.createElement('button');buyBtn.type='button';buyBtn.className='jbl-btn jbl-btn-primary';buyBtn.textContent='BUY NOW';
+          buyBtn.addEventListener('click',function(){openCheckout(p);});actions.appendChild(buyBtn);
+        } else {
+          var disBtn=document.createElement('button');disBtn.type='button';disBtn.className='jbl-btn jbl-btn-disabled';disBtn.disabled=true;disBtn.textContent='UNAVAILABLE';actions.appendChild(disBtn);
+        }
+        var detBtn=document.createElement('button');detBtn.type='button';detBtn.className='jbl-btn jbl-btn-ghost';detBtn.textContent='DETAILS';
+        detBtn.addEventListener('click',function(){openQV(p);});actions.appendChild(detBtn);
+        body.appendChild(actions);
+        card.appendChild(body);
+        gridEl.appendChild(card);
+      });
+    }
+
+    function runApp(){
+      if(!CONFIG||!products||!products.length)return;
+      var loadEl=$('jbl-loading');if(loadEl)loadEl.style.display='none';
+      currSym=CONFIG.currencySymbol||'\u0192';
+      searchEl=$('jbl-search');sortEl=$('jbl-sort');gridEl=$('jbl-grid');metaEl=$('jbl-meta');tabsEl=$('jbl-tabs');
+
+      // FAQ
+      var faqList=$('jbl-faq-list');
+      if(faqList&&CONFIG.faq&&CONFIG.faq.length){
+        faqList.textContent='';
+        CONFIG.faq.forEach(function(f){
+          var item=document.createElement('div');item.className='jbl-faq-item';
+          var btn=document.createElement('button');btn.type='button';btn.className='jbl-faq-q';btn.setAttribute('aria-expanded','false');btn.textContent=f.q;
+          var ans=document.createElement('div');ans.className='jbl-faq-a';
+          var inner=document.createElement('div');inner.className='jbl-faq-a-inner';inner.textContent=f.a;
+          ans.appendChild(inner);item.appendChild(btn);item.appendChild(ans);faqList.appendChild(item);
+        });
+      }
+
+      initFaq();initBackTop();initKeyboard();initTerms();initHeroScroll();initEmailJS();initCheckout();
+
+      // WhatsApp links
+      var waFab=$('jbl-wa-fab');if(waFab)waFab.href='https://wa.me/'+CONFIG.whatsappNumber;
+      var waFoot=$('jbl-footer-wa');if(waFoot)waFoot.href='https://wa.me/'+CONFIG.whatsappNumber;
+
+      // Quickview close
+      $('jbl-qv-close').addEventListener('click',function(){closeOv('jbl-quickview');});
+      $('jbl-quickview').addEventListener('click',function(e){if(e.target===this)closeOv('jbl-quickview');});
+
+      if(searchEl){
+        searchEl.addEventListener('input',updateGrid);
+        searchEl.addEventListener('keyup',function(e){if(e.key==='Escape'){searchEl.value='';updateGrid();}});
+      }
+      if(sortEl)sortEl.addEventListener('change',updateGrid);
+
+      activeCat=getHash();
+      if(['All','Speakers','Headsets','Earbuds'].indexOf(activeCat)===-1)activeCat='All';
+      window.addEventListener('hashchange',function(){var h=getHash();if(['All','Speakers','Headsets','Earbuds'].indexOf(h)!==-1){activeCat=h;updateTabs();updateGrid();}});
+
+      updateTabs();updateGrid();
+      if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
+    }
+
+    loadData(runApp);
+  })();
+  </script>
+</body>
+</html>

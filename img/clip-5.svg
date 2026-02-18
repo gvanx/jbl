@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="12" fill="#1a1a1a"/>
+  <g>
+    <rect x="160" y="70" width="80" height="100" rx="8" fill="none" stroke="#FF6600" stroke-width="3"/>
+    <circle cx="200" cy="130" r="25" fill="none" stroke="#FF6600" stroke-width="3"/>
+    <circle cx="200" cy="130" r="10" fill="#FF6600"/>
+    <circle cx="200" cy="90" r="8" fill="none" stroke="#FF6600" stroke-width="2"/>
+    <circle cx="200" cy="90" r="3" fill="#FF6600"/>
+    <path d="M250 100 Q270 120 250 140" fill="none" stroke="#FF6600" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M260 85 Q290 120 260 155" fill="none" stroke="#FF6600" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="200" y="225" text-anchor="middle" fill="#FF6600" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold">JBL</text>
+  <text x="200" y="250" text-anchor="middle" fill="#FF6600" font-family="Arial, Helvetica, sans-serif" font-size="14">Clip 5</text>
+</svg>
