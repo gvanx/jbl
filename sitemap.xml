@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jbl.connectionscuracao.net/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:s="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <s:url>
+    <s:loc>https://jbl.connectionscuracao.net/</s:loc>
+    <s:lastmod>2026-02-18</s:lastmod>
+    <s:changefreq>weekly</s:changefreq>
+    <s:priority>1.0</s:priority>
+  </s:url>
+  <s:url>
+    <s:loc>https://jbl.connectionscuracao.net/#Speakers</s:loc>
+    <s:lastmod>2026-02-18</s:lastmod>
+    <s:changefreq>weekly</s:changefreq>
+    <s:priority>0.8</s:priority>
+  </s:url>
+  <s:url>
+    <s:loc>https://jbl.connectionscuracao.net/#Headsets</s:loc>
+    <s:lastmod>2026-02-18</s:lastmod>
+    <s:changefreq>weekly</s:changefreq>
+    <s:priority>0.8</s:priority>
+  </s:url>
+  <s:url>
+    <s:loc>https://jbl.connectionscuracao.net/#Earbuds</s:loc>
+    <s:lastmod>2026-02-18</s:lastmod>
+    <s:changefreq>weekly</s:changefreq>
+    <s:priority>0.8</s:priority>
+  </s:url>
 </urlset>

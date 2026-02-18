@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0d0d0d"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#FF6600"/>
+  <text x="600" y="250" text-anchor="middle" font-family="Arial Black, sans-serif" font-weight="900" font-size="120" fill="#ffffff">JBL</text>
+  <text x="600" y="250" text-anchor="middle" font-family="Arial Black, sans-serif" font-weight="900" font-size="120" fill="#FF6600" dx="200">CURACAO</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-weight="400" font-size="36" fill="#999999">Speakers · Headsets · Earbuds</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="28" fill="#FF6600">powered by Connections Curacao</text>
+  <rect x="400" y="480" width="400" height="60" rx="30" fill="#FF6600"/>
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff">SHOP NOW</text>
+</svg>
