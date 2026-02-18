@@ -1,0 +1,18 @@
+{
+  "name": "JBL CURACAO – powered by Connections Curacao",
+  "short_name": "JBL CURACAO",
+  "description": "JBL speakers, headsets & earbuds in Curaçao.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#FF6600",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
